@@ -15,7 +15,7 @@ const LocationkeySlice = createSlice({
     settemperature(state, action) {
       state.temperature = action.payload;
     },
-    errorhandling(state, action) {
+    errorhandling(state) {
       state.Error = !state;
     }
 
