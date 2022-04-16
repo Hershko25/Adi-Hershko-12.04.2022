@@ -16,6 +16,7 @@ const FivedaydailyforecastSlice = createSlice({
         Fivedaydailyforecast(state, action) {
             state.array = action.payload;
             state.Error='';
+            console.log(state.array )
             
         },
         errorhandling(state){
