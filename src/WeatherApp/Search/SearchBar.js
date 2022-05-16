@@ -69,21 +69,8 @@ flex-direction: column;
   }
   
 }
-& .dataItem {
-  width: 100%;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  color: black;
-  
-}
 & p {
   margin-left: 10px;
-}
-& a {
-  text-decoration: none;
-
-
 }
 `;
 
@@ -103,10 +90,11 @@ export default function SearchBar() {
 
   const setlocationkey = (key,City,Country) => {
     setplaceholdertext(`${City}, ${Country}`);
-    dispatch( getcurrentweather(key,City,Country));
+    dispatch(getcurrentweather(key,City,Country));
     dispatch(getFivedaydailyforecast(key));
-    dispatch( LocationkeyActions.setlocationkey([]))   
+    dispatch(LocationkeyActions.setlocationkey([]))   
   }
+
   return (
     <Search>
       <div >
@@ -117,9 +105,9 @@ export default function SearchBar() {
           placeholder={'Search'}
         />
       </div>
-      {Locationkey.length !== 0 && (
+      {Locationkey.length > 0 && (
         <ul className="dataResult">
-          {Locationkey.slice(0, 15).map((value, key) => {
+          {Locationkey.map((value, key) => {
             return (
               <li key={key} onClick={() => setlocationkey(value.key,value.City,value.Country)}>
                 <p>{value.City} ,{value.Country} </p>

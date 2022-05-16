@@ -4,7 +4,7 @@ const initialFavoriteSave = { info: [], id: 1 };
 
 
 const FavoriteSaveSlice = createSlice({
-  name: 'Fivedaydailyforecast',
+  name: 'FavoriteSave',
   initialState: initialFavoriteSave,
   reducers: {
     SetFavorite(state, action) {

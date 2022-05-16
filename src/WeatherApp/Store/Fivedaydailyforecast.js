@@ -30,7 +30,7 @@ const FivedaydailyforecastSlice = createSlice({
 export const getFivedaydailyforecast = (event) => {
     return (dispatch) => {
         
-        if (event !== '') {
+         if (event !== '') {
             let apiUrl = `${url}/${event}?apikey=${apikey}`;
             fetch(apiUrl)
                 .then(res => {
@@ -38,11 +38,9 @@ export const getFivedaydailyforecast = (event) => {
                 })
                 .then(
                     (result) => {
-                        console.log();
                         let temp = [];
                         result["DailyForecasts"].map((per) => {
-                            console.log();
-                            temp.push({
+                           return temp.push({
                                 Day: per.Date,
                                 Precipitation_Type_day: per.Day.Icon,
                                 Precipitation_Type_night: per.Night.Icon,

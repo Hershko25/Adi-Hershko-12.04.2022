@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import getIcon from '../icons/GetIcon';
 import CloseIcon from '@mui/icons-material/Close';
 import {FavoriteSavetActions} from '../Store/FavoriteSave';
-import {CurrentWeatherActions} from '../Store/CurrentWeather';
+
 
 const Container = styled.div`
     width: 40%;

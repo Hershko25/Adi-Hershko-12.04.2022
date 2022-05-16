@@ -25,7 +25,6 @@ const CurrentWeatherSlice = createSlice({
 export const getcurrentweather = (key, City, Country) => {
 
   return (dispatch) => {
-    
 
     let temp = [];
     let apiUrl = `${url}/currentconditions/v1/${key}?apikey=${apikey}`;
@@ -36,7 +35,7 @@ export const getcurrentweather = (key, City, Country) => {
       .then(
         (result) => {
           result.map((per) => {
-            temp.push({
+           return temp.push({
               Country: Country,
               City: City,
               WeatherText: per.WeatherText,

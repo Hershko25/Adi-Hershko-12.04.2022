@@ -1,4 +1,3 @@
-import React from 'react';
 import { configureStore } from '@reduxjs/toolkit';
 import LocationkeyReducer from './Locationkey'
 import CurrentWeatherReducer from './CurrentWeather';

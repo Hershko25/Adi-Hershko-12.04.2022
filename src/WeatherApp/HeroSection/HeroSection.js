@@ -5,14 +5,14 @@ import styled from 'styled-components';
 
 
 
-const HeroSectionPage=styled.section`
+const HeroSectionPage = styled.section`
  height: 40vh;
 `;
 
 export default function HeroSection() {
   return (
     <HeroSectionPage >
-          <SearchBar/>
+      <SearchBar />
     </HeroSectionPage>
   )
 }
