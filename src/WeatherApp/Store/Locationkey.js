@@ -2,7 +2,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialLocationkey = { array: [{ key: '215793', City: 'Tel-Aviv', Country: 'Israel' }], temperature: true, Error: false };
-
+const apikey =  process.env.REACT_APP_API_KEY;
 
 
 const LocationkeySlice = createSlice({
@@ -26,7 +26,7 @@ export const getlocationkey = (event) => {
 
   return (dispatch) => {
     if (event !== '') {
-      let apiUrl = `https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=4hWSnPaS4o39gPDu9V4DULqEdmptySLy&q=${event}`;
+      let apiUrl = `https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=${apikey }&q=${event}`;
       fetch(apiUrl)
         .then(res => {
           return res.json()

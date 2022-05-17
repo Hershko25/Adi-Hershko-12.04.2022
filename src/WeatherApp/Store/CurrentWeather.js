@@ -4,7 +4,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 const url = "https://dataservice.accuweather.com";
-const apikey = "4hWSnPaS4o39gPDu9V4DULqEdmptySLy";
+const apikey =  process.env.REACT_APP_API_KEY;
 const initialcurrentweather = { array: [],Error:'loading'};
 
 const CurrentWeatherSlice = createSlice({

@@ -4,7 +4,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 const url = "https://dataservice.accuweather.com/forecasts/v1/daily/5day/";
-const apikey = "4hWSnPaS4o39gPDu9V4DULqEdmptySLy";
+const apikey =  process.env.REACT_APP_API_KEY;
 
 
 const initialFivedaydailyforecast = { array: [] ,Error:'loading'};
