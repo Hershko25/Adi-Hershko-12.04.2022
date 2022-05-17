@@ -9,7 +9,7 @@ import {FavoriteSavetActions} from '../Store/FavoriteSave';
 const Container = styled.div`
     width: 40%;
     margin: auto;
-    margin-top: 25%;
+   
 
 
     & p{
